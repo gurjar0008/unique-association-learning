@@ -1,0 +1,23 @@
+├── package.json               # Defines scripts and npm dependencies (React 19, Tailwind v4, Lucide, Firebase, etc.)
+├── tsconfig.json             # TypeScript compiler configurations
+├── vite.config.ts             # Vite server, React plugin, and Tailwind v4 configuration
+├── tailwind.config.ts         # Tailwind CSS themes and utility classes
+├── index.html                 # The primary entry point for the single-page application
+├── firestore.rules            # Secure Firebase Firestore database rules
+├── firebase-blueprint.json    # Initial Firestore database schema & collections
+├── .env.example               # Template documenting environment variables
+├── .gitignore                 # Configured to ignore node_modules, build artifacts, and logs
+└── src/
+    ├── main.tsx               # Primary React DOM rendering entry point
+    ├── App.tsx                # Main controller and app router (Home / Admin Panel routing)
+    ├── firebase.ts            # Firebase SDK setup, Firestore DB init, and operation utilities
+    ├── types.ts               # Shared TypeScript interface definitions (User, Task, Log)
+    ├── index.css              # Global Tailwind v4 directive imports and custom styling rules
+    ├── utils/
+    │   └── crypto.ts          # Browser-safe SHA-256 password hashing utility
+    └── components/
+        ├── Home.tsx           # Full student portal (Dashboard, study planner, profile, logout)
+        ├── AdminPanel.tsx     # Full administrative portal (Management, statistics, approval/rejection)
+        ├── Login.tsx          # Multi-tenant secure login page with self-service credential recovery
+        ├── SignUp.tsx         # Responsive registration portal with user-profile customization
+        └── Captcha.tsx        # Self-contained dynamic graphic safety validation (visual captcha)
